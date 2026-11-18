@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "posterbot",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4178"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["serve.mjs", "4178"],
       "port": 4178
     }
   ]
