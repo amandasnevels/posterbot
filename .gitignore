@@ -1,0 +1,15 @@
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Claude Code local state
+.claude/settings.local.json
+
+# scratch
+*.log
+tmp/
+out/
+*.local.*
