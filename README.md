@@ -23,10 +23,8 @@ was being served, with three exceptions:
   still exports the same 311 names, and exporting the built-in example poster
   produces a byte-for-byte identical 312,571-byte PDF before and after.
 
-Also published as a private Claude Artifact:
-<https://claude.ai/artifact/Apu5EYTaJpgfS7yjyiJ4es>. That copy is this repo's
-`index.html` plus its five scripts and stylesheet, so re-publishing the same files
-to that URL updates it in place.
+A copy is also published as a private Claude Artifact, built from this repo's
+`index.html` plus its five scripts and stylesheet.
 
 ## Architecture
 
@@ -83,7 +81,7 @@ same thing and opens the browser pane at it.
 
 ## Deploying
 
-Repo: <https://github.com/amandasnevels/posterbot> (private).
+Repo: <https://github.com/amandasnevels/posterbot>.
 
 `vercel.json` already describes the deployment — no framework, no build step, the
 repo root served as-is — so Vercel needs no configuration beyond importing the repo.
