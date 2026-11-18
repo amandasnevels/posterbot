@@ -81,7 +81,11 @@ same thing and opens the browser pane at it.
 
 ## Deploying
 
-Repo: <https://github.com/amandasnevels/posterbot>.
+Live at <https://posterbot.vercel.app>. Repo:
+<https://github.com/amandasnevels/posterbot>.
+
+Pushing to `main` deploys to production — the Vercel project is connected to this
+repo, so no manual step is needed per release.
 
 `vercel.json` already describes the deployment — no framework, no build step, the
 repo root served as-is — so Vercel needs no configuration beyond importing the repo.
