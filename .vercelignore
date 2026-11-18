@@ -1,0 +1,4 @@
+# Local development only — not part of the deployed site.
+serve.mjs
+README.md
+.claude/
