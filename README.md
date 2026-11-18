@@ -81,6 +81,39 @@ Then open http://localhost:4178.
 In Claude Code, `.claude/launch.json` defines a `posterbot` server that does the
 same thing and opens the browser pane at it.
 
+## Deploying
+
+Repo: <https://github.com/amandasnevels/posterbot> (private).
+
+`vercel.json` already describes the deployment — no framework, no build step, the
+repo root served as-is — so Vercel needs no configuration beyond importing the repo.
+`.vercelignore` keeps `serve.mjs`, this README and `.claude/` out of the upload.
+
+Either path works; both need a Vercel sign-in, which is why neither is scripted here.
+
+**Dashboard.** Go to <https://vercel.com/new> and press Import next to
+`amandasnevels/posterbot`. If it is not listed, the Vercel GitHub App has not been
+granted access to it — the repo is private, so access has to be granted explicitly.
+
+**CLI.** From this directory:
+
+```powershell
+npx vercel
+```
+
+The first run prompts for login and links the project; `npx vercel --prod` promotes
+it to the production domain afterwards.
+
+### After deploying
+
+The old ChatGPT-hosted copy at `posterbot.mandarobin.chatgpt.site` stays up until it
+is taken down separately — deploying here does not retire it.
+
+Check `vendor/` responds with `cache-control: public, max-age=31536000, immutable`
+and that `/` revalidates, then load the site and press "Try an example" — if the
+preview is blank and the console says `pdfjsLib is not defined`, a vendor bundle did
+not finish transferring.
+
 ## Features
 
 - **Single poster** — enlarge one page of one PDF
