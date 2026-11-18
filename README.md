@@ -12,10 +12,21 @@ PDF you trim and tape together.
 
 Transferred out of ChatGPT Codex hosting (`posterbot.mandarobin.chatgpt.site`) on
 2026-11-18 and now maintained here. The transferred source is byte-identical to what
-was being served, with two exceptions:
+was being served, with three exceptions:
 
 - the Cloudflare bot-detection `<script>` the old host injected before `</body>` was removed
 - an inline SVG favicon was added (the old host served a 404 page for `/favicon.ico`)
+- in `vendor/pdf-lib.min.js`, four literal `U+FFFD` characters inside pdf-lib's own
+  string literals (its PDFDocEncoding table and its replacement-character constant)
+  were rewritten as `�` escapes — exactly equivalent JavaScript, +12 bytes. Some
+  publishing targets reject literal replacement characters. Verified: the library
+  still exports the same 311 names, and exporting the built-in example poster
+  produces a byte-for-byte identical 312,571-byte PDF before and after.
+
+Also published as a private Claude Artifact:
+<https://claude.ai/artifact/Apu5EYTaJpgfS7yjyiJ4es>. That copy is this repo's
+`index.html` plus its five scripts and stylesheet, so re-publishing the same files
+to that URL updates it in place.
 
 ## Architecture
 
