@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="PosterBot">
+  <defs>
+    <linearGradient id="pbFace" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.52" stop-color="#ffffff"/>
+      <stop offset="0.72" stop-color="#bfe9ee"/>
+      <stop offset="0.86" stop-color="#c9b8e6"/>
+      <stop offset="1" stop-color="#f14c8e"/>
+    </linearGradient>
+    <linearGradient id="pbPaper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#28c6c2"/>
+      <stop offset="0.5" stop-color="#c9b8e6"/>
+      <stop offset="1" stop-color="#f14c8e"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="116" height="116" rx="28" fill="#1a1f3a"/>
+  <!-- antenna + Nevel sparkle -->
+  <line x1="60" y1="22" x2="60" y2="29" stroke="#c9b8e6" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M60 6 Q61.4 13.6 69 15 Q61.4 16.4 60 24 Q58.6 16.4 51 15 Q58.6 13.6 60 6Z" fill="#f14c8e"/>
+  <!-- ears -->
+  <rect x="15" y="45" width="8" height="20" rx="4" fill="#28c6c2"/>
+  <rect x="97" y="45" width="8" height="20" rx="4" fill="#28c6c2"/>
+  <!-- head = poster -->
+  <rect x="23" y="29" width="74" height="53" rx="13" fill="url(#pbFace)"/>
+  <!-- cut guides: 2 x 2 sheets -->
+  <g stroke="#1a1f3a" stroke-opacity=".28" stroke-width="1.4" stroke-dasharray="3 3">
+    <line x1="60" y1="31" x2="60" y2="80"/>
+    <line x1="25" y1="55.5" x2="95" y2="55.5"/>
+  </g>
+  <!-- eyes -->
+  <rect x="37" y="38" width="11" height="13" rx="5.5" fill="#1a1f3a"/>
+  <rect x="72" y="38" width="11" height="13" rx="5.5" fill="#1a1f3a"/>
+  <circle cx="45" cy="41.5" r="1.9" fill="#28c6c2"/>
+  <circle cx="80" cy="41.5" r="1.9" fill="#28c6c2"/>
+  <!-- smile -->
+  <path d="M48 64 Q60 73 72 64" fill="none" stroke="#1a1f3a" stroke-width="3.6" stroke-linecap="round"/>
+  <!-- printer slot + sheet -->
+  <rect x="31" y="88" width="58" height="7" rx="3.5" fill="#33396a"/>
+  <path d="M40 92 H80 V104 Q80 108 76 108 H44 Q40 108 40 104Z" fill="#ffffff"/>
+  <rect x="44" y="98" width="32" height="5" rx="2.5" fill="url(#pbPaper)"/>
+</svg>
